@@ -2,24 +2,28 @@
   "name": "mcp-appsignal",
   "version": "1.0.0",
   "description": "MCP server for AppSignal integration",
-  "main": "dist/index.js",
+  "main": "src/index.js",
+  "bin": {
+    "mcp-appsignal": "src/index.js"
+  },
   "scripts": {
-    "build": "tsc --skipLibCheck --noEmitOnError",
-    "start": "node dist/index.js",
-    "start:http": "node dist/http-server.js",
-    "start:direct": "node src/index.js",
-    "dev": "tsc -w --skipLibCheck --noEmitOnError & node --watch dist/index.js",
-    "dev:http": "tsc -w --skipLibCheck --noEmitOnError & node --watch dist/http-server.js",
+    "start": "node src/index.js",
     "test": "echo \"Tests temporarily disabled\" && exit 0",
-    "test:watch": "echo \"Tests temporarily disabled\" && exit 0"
+    "prepublishOnly": "node prepare-publish.js",
+    "postpublish": "node restore-readme.js"
   },
   "keywords": [
     "mcp",
     "appsignal",
-    "cursor"
+    "cursor",
+    "modelcontextprotocol"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Jimmy Qiu",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/mcp-appsignal"
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.11.4",
     "axios": "^1.9.0",

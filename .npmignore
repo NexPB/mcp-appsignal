@@ -1,0 +1,31 @@
+# Development files
+.git/
+.github/
+.vscode/
+node_modules/
+dist/
+coverage/
+*.log
+*.tsbuildinfo
+
+# Configuration files
+tsconfig.json
+tsconfig.*.json
+jest.config.js
+.eslintrc.js
+.prettierrc
+.editorconfig
+
+# Source files not needed for distribution
+src/**/*.test.ts
+src/**/*.spec.ts
+src/http-server.ts
+src/http-server.js
+
+# Misc
+.DS_Store
+.env
+.env.local
+.env.development
+.env.test
+.env.production
