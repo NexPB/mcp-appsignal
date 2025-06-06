@@ -22,7 +22,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/mcp-appsignal"
+    "url": "git+https://github.com/NexPB/mcp-appsignal.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.11.4",
